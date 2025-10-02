@@ -1400,6 +1400,13 @@
             "value": false,
             "type": "checkbox"
         },
+        {
+            "name": "shareBluesky",
+            "group": "Share Buttons",
+            "label": "BlueSky",
+            "value": false,
+            "type": "checkbox"
+        },
 
         {
             "name": "separator",
