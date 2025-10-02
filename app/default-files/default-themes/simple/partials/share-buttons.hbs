@@ -72,12 +72,24 @@
 
 {{#if @config.custom.shareWhatsApp}}
    <a
-      href="https://api.whatsapp.com/send?text={{encodeUrlFragment title}} {{encodeUrlFragment url}}" 
+      href="https://api.whatsapp.com/send?text={{encodeUrlFragment title}} {{encodeUrlFragment url}}"
       class="js-share whatsapp"
       rel="nofollow noopener noreferrer">
       <svg class="icon" aria-hidden="true" focusable="false">
          <use xlink:href="{{@website.assetsUrl}}/svg/svg-map.svg#whatsapp"/>
       </svg>
       <span>{{ translate 'partials.shareButtons.shareWithWhatsApp' }}</span>
+   </a>
+{{/if}}
+
+{{#if @config.custom.shareBluesky}}
+   <a
+      href="https://bsky.app/intent/compose?text={{encodeUrlFragment title}} {{encodeUrlFragment url}}"
+      class="js-share bluesky"
+      rel="nofollow noopener noreferrer">
+      <svg class="icon" aria-hidden="true" focusable="false">
+         <use xlink:href="{{@website.assetsUrl}}/svg/svg-map.svg#bluesky"/>
+      </svg>
+      <span>{{ translate 'partials.shareButtons.shareWithBluesky' }}</span>
    </a>
 {{/if}}
